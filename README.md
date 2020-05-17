@@ -1,4 +1,4 @@
-<img src="https://github.com/kobusvdwalt/falcon9/blob/master/_landing_page/ss1.png" alt="Kitten" title="Screenshot1"/>
+<img src="https://github.com/kobusvdwalt/falcon9/blob/master/_landing_page/ss1.png" alt="Screenshot1" title="Screenshot1"/>
 # Falcon9
 Falcon9 was made in one month as part of a game jam with the theme "graphically primative"
 
