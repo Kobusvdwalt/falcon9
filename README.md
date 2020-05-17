@@ -4,7 +4,7 @@ You can play the game here : [Play Falcon9](https://kobusvdwalt.github.io/games/
 ## Description
 Falcon9 was made in one month as part of a game jam with the theme "graphically primative"
 
-Dependancies:
+Dependencies:
 * Unity3D Game Engine
 
 ## Screenshots
