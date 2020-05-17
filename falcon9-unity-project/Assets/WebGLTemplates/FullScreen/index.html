@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>%UNITY_WEB_NAME%</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel=icon href= "data/favicon.png">
+    <link rel="stylesheet" href="data/spinner.css">
+    <link rel="stylesheet" href="data/style.css">
+
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/UnityProgress.js"></script>
+
+    <script>
+      // Load the unity player ***************************************************
+      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%",
+      {
+        onProgress: UnityProgress, 
+        Module: {
+          cacheControl: {"default": "max-age=86400"},
+          onRuntimeInitialized: function () {
+            UnityProgress(gameInstance, "complete");
+          }
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="gameContainer"></div>
+    <div class="webgl-content">
+      <div id="loadingBox">
+        <div id="spinner" class="lds-css ng-scope" style="display: none; margin: 0 auto">
+          <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+                
+        <div id="bgBar">
+          <div id="progressBar"></div>
+        </div>
+        
+        <p id="loadingInfo">Loading...</p>
+      </div>      
+    </div>
+  </body>
+</html>
